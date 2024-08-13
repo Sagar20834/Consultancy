@@ -1,5 +1,8 @@
 import React from "react";
 import banner from "../../assets/mobile-banner.png";
+import { FaArrowAltCircleRight } from "react-icons/fa";
+import NearEvents from "../NearEvents/NearEvents";
+import ConsultationSection from "../ConsultationSection/ConsultationSection";
 
 const HomePage = () => {
   return (
@@ -13,14 +16,17 @@ const HomePage = () => {
             We’ve helped 60,000+ students turn their dreams into reality, for
             FREE!*
           </h1>
-          <button className="bg-buttoncolor-light p-4 rounded-full mt-4 ">
-            Talk to Us
+          <button className="bg-buttoncolor-light p-4 rounded-full mt-4 flex justify-center items-center gap-4 ">
+            Get Started for FREE Now{" "}
+            <FaArrowAltCircleRight size={32} className="text-white" />
           </button>
         </div>
         <div>
-          <img src={banner} alt="" />
+          <img src={banner} alt="banner" />
         </div>
       </div>
+      <NearEvents />
+      <ConsultationSection />
     </>
   );
 };

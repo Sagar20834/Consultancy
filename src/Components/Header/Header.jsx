@@ -12,14 +12,14 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex justify-between p-4 items-center bg-gray-200 min-h-20">
-        <div className="flex items-center text-primary-dark">
+      <div className="flex justify-between p-4 items-center bg-gray-200 max-h-16">
+        <div className="flex items-center text-primary-dark mr-2">
           <img src={logo} alt="React Logo" className="h-12" />
-          <h1 className="text-xl font-bold ml-2">Welcome to Comp. Name</h1>
+          <h1 className="text-xl font-bold ml-2 whitespace-nowrap ">Welcome</h1>
         </div>
 
         {/* Full menu for larger screens */}
-        <div className="hidden md:flex gap-4 items-center text-primary-light">
+        <div className="hidden md:flex gap-2 items-center text-primary-light">
           <ul className="flex gap-4 items-center">
             <li className="whitespace-nowrap">Student Services</li>
             <li className="whitespace-nowrap">Study Abroad</li>
@@ -29,10 +29,10 @@ const Header = () => {
             <li className="whitespace-nowrap">Upcoming Events</li>
             <li className="whitespace-nowrap">Blogs</li>
           </ul>
-          <Button className="bg-primary-dark text-white rounded-full p-2">
-            Meet Us Online
-          </Button>
         </div>
+        <Button className="bg-primary-dark text-white rounded-full p-2">
+          Meet Us Online
+        </Button>
 
         {/* Hamburger menu for smaller screens */}
         <div className="md:hidden flex items-center">
