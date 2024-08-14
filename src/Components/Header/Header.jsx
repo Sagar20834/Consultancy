@@ -30,7 +30,7 @@ const Header = () => {
             <li className="whitespace-nowrap">Blogs</li>
           </ul>
         </div>
-        <Button className="bg-primary-dark text-white rounded-full p-2">
+        <Button className="bg-primary-dark text-gray-50 rounded-full p-3">
           Meet Us Online
         </Button>
 
