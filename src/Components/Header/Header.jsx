@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import logo from "../../assets/react.svg";
-import { Button } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import ContactFormModal from "../ContactFormModal/ContactFormModal";
 
@@ -20,11 +19,11 @@ const Header = () => {
       <div className="flex justify-between p-4 items-center bg-gray-200 max-h-16">
         <div className="flex items-center text-primary-dark mr-2">
           <img src={logo} alt="React Logo" className="h-12" />
-          <h1 className="text-xl font-bold ml-2 whitespace-nowrap ">Welcome</h1>
+          <h1 className="text-xl font-bold ml-2 whitespace-nowrap">Welcome</h1>
         </div>
 
-        {/* Full menu for larger screens */}
-        <div className="hidden md:flex gap-2 items-center text-primary-light">
+        {/* Full menu for laptop screens and larger */}
+        <div className="hidden lg:flex gap-2 items-center text-primary-light">
           <ul className="flex gap-4 items-center">
             <li className="whitespace-nowrap">Student Services</li>
             <li className="whitespace-nowrap">Study Abroad</li>
@@ -35,16 +34,18 @@ const Header = () => {
             <li className="whitespace-nowrap">Blogs</li>
           </ul>
         </div>
+
+        {/* "Meet Us Online" button for large screens */}
         <button
           onClick={() => setShowModel(true)}
-          className="bg-primary-dark text-gray-50 rounded-full p-3"
+          className="hidden lg:block bg-primary-dark text-gray-50 rounded-full h-12 p-3 text-ellipsis text-nowrap"
         >
           Meet Us Online
         </button>
         {showModel && <ContactFormModal onClose={onClose} />}
 
-        {/* Hamburger menu for smaller screens */}
-        <div className="md:hidden flex items-center">
+        {/* Hamburger menu for mobile screens */}
+        <div className="lg:hidden flex items-center">
           <button
             variant="text"
             className="text-primary-dark"
@@ -61,7 +62,7 @@ const Header = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden lg:hidden bg-gray-200">
+        <div className="lg:hidden bg-gray-200">
           <ul className="flex flex-col gap-4 items-center p-4 text-primary-dark">
             <li className="w-full text-center">Student Services</li>
             <li className="w-full text-center">Study Abroad</li>
@@ -74,7 +75,7 @@ const Header = () => {
           <div className="flex justify-center pb-4">
             <button
               onClick={() => setShowModel(true)}
-              className="bg-primary-dark text-gray-50 rounded-full p-2 "
+              className="bg-primary-dark text-gray-50 rounded-full p-2"
             >
               Meet Us Online
             </button>
