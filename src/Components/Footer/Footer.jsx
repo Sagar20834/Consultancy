@@ -7,7 +7,7 @@ import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa6";
 const Footer = () => {
   return (
     <>
-      <div className="bg-primary-dark text-white flex flex-col gap-4 p-8 shrink">
+      <div className="bg-primary-dark text-gray-50 flex flex-col gap-4 p-8 shrink">
         <div className=" grid   grid-cols-1 justify-center sm:grid-cols-4  md:grid-col-2 ">
           <div>
             <div className="flex gap-2">

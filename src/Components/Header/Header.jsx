@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import logo from "../../assets/react.svg";
 import { Button } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import ContactFormModal from "../ContactFormModal/ContactFormModal";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showModel, setShowModel] = useState(false);
+  const onClose = () => {
+    setShowModel(false);
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -30,13 +35,17 @@ const Header = () => {
             <li className="whitespace-nowrap">Blogs</li>
           </ul>
         </div>
-        <Button className="bg-primary-dark text-gray-50 rounded-full p-3">
+        <button
+          onClick={() => setShowModel(true)}
+          className="bg-primary-dark text-gray-50 rounded-full p-3"
+        >
           Meet Us Online
-        </Button>
+        </button>
+        {showModel && <ContactFormModal onClose={onClose} />}
 
         {/* Hamburger menu for smaller screens */}
         <div className="md:hidden flex items-center">
-          <Button
+          <button
             variant="text"
             className="text-primary-dark"
             onClick={toggleMenu}
@@ -46,13 +55,13 @@ const Header = () => {
             ) : (
               <Bars3Icon className="h-8 w-8" />
             )}
-          </Button>
+          </button>
         </div>
       </div>
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-gray-200">
+        <div className="md:hidden lg:hidden bg-gray-200">
           <ul className="flex flex-col gap-4 items-center p-4 text-primary-dark">
             <li className="w-full text-center">Student Services</li>
             <li className="w-full text-center">Study Abroad</li>
@@ -63,9 +72,13 @@ const Header = () => {
             <li className="w-full text-center">Blogs</li>
           </ul>
           <div className="flex justify-center pb-4">
-            <Button className="bg-primary-dark text-white rounded-full p-2">
+            <button
+              onClick={() => setShowModel(true)}
+              className="bg-primary-dark text-gray-50 rounded-full p-2 "
+            >
               Meet Us Online
-            </Button>
+            </button>
+            {showModel && <ContactFormModal onClose={onClose} />}
           </div>
         </div>
       )}

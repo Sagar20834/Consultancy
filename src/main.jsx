@@ -6,7 +6,6 @@ import "./index.css";
 import { ThemeProvider } from "@material-tailwind/react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./Components/HomePage/HomePage.jsx";
-
 const router = createBrowserRouter([
   {
     path: "/",
