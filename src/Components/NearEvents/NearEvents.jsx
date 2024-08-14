@@ -1,7 +1,7 @@
 import React from "react";
-import kathmandu from "../../assets/kathmandu.png";
-import pokhara from "../../assets/pokhara.png";
-import butwal from "../../assets/butwal.jpg";
+import kathmandu from "../../assets/Kathmandu.png";
+import pokhara from "../../assets/Pokhara.png";
+import butwal from "../../assets/Butwal.jpg";
 
 const NearEvents = () => {
   return (
