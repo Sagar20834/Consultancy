@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <div className="relative">
-      <div className="flex justify-between p-4 items-center border-b shadow-md max-h-16 fixed w-full top-0 bg-white z-50">
+      <div className="flex justify-between p-4 items-center border-b shadow-md max-h-16  fixed w-full top-0 bg-white z-1">
         <div className="flex items-center text-primary-dark mr-2">
           <img src={logo} alt="React Logo" className="h-12" />
           <h1 className="text-xl font-bold ml-2 whitespace-nowrap">Welcome</h1>
@@ -63,8 +63,8 @@ const Header = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-gray-200 z-2 flex flex-col items-center p-4 text-primary-dark -mt-16 mb-4  justify-center">
-          <ul className="flex flex-col gap-4 items-center w-full">
+        <div className="lg:hidden fixed top-12 inset-0 bg-gray-200 bg-opacity-100">
+          <ul className="flex flex-col gap-4 items-center p-4 text-primary-dark">
             <li className="w-full text-center">Student Services</li>
             <li className="w-full text-center">Study Abroad</li>
             <li className="w-full text-center">Scholarship</li>
@@ -73,10 +73,10 @@ const Header = () => {
             <li className="w-full text-center">Upcoming Events</li>
             <li className="w-full text-center">Blogs</li>
           </ul>
-          <div className="flex justify-center w-full mt-4">
+          <div className="flex justify-center pb-4">
             <button
               onClick={() => setShowModel(true)}
-              className="bg-primary-dark text-gray-50 rounded-full p-2 w-full max-w-sm"
+              className="bg-primary-dark text-gray-50 rounded-full p-2"
             >
               Meet Us Online
             </button>
