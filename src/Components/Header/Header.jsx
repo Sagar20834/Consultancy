@@ -63,7 +63,7 @@ const Header = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-gray-200 z-2 flex flex-col items-center p-4 text-primary-dark mt-16 mb-24 justify-center">
+        <div className="lg:hidden fixed inset-0 bg-gray-200 z-2 flex flex-col items-center p-4 text-primary-dark -mt-16 mb-4  justify-center">
           <ul className="flex flex-col gap-4 items-center w-full">
             <li className="w-full text-center">Student Services</li>
             <li className="w-full text-center">Study Abroad</li>
