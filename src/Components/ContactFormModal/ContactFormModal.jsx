@@ -11,6 +11,7 @@ const ContactFormModal = ({ onClose }) => {
   const modelRef = useRef();
   const onSubmit = (data) => {
     console.log(data);
+    onClose();
   };
 
   const closeModel = (e) => {

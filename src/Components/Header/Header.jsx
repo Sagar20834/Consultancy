@@ -6,6 +6,7 @@ import ContactFormModal from "../ContactFormModal/ContactFormModal";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showModel, setShowModel] = useState(false);
+
   const onClose = () => {
     setShowModel(false);
   };
@@ -15,8 +16,8 @@ const Header = () => {
   };
 
   return (
-    <>
-      <div className="flex justify-between p-4 items-center bg-gray-200 max-h-16">
+    <div className="relative">
+      <div className="flex justify-between p-4 items-center border-b shadow-md max-h-16  fixed w-full top-0 bg-white z-1">
         <div className="flex items-center text-primary-dark mr-2">
           <img src={logo} alt="React Logo" className="h-12" />
           <h1 className="text-xl font-bold ml-2 whitespace-nowrap">Welcome</h1>
@@ -62,7 +63,7 @@ const Header = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-gray-200">
+        <div className="lg:hidden bg-gray-200 ">
           <ul className="flex flex-col gap-4 items-center p-4 text-primary-dark">
             <li className="w-full text-center">Student Services</li>
             <li className="w-full text-center">Study Abroad</li>
@@ -83,7 +84,7 @@ const Header = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

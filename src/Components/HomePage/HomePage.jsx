@@ -18,7 +18,7 @@ const HomePage = () => {
   return (
     <>
       <div className="flex justify-center flex-col items-center  text-center  ">
-        <div className=" flex flex-col items-center gap-3  ">
+        <div className=" flex flex-col items-center gap-3  mt-24 ">
           <h1 className="text-4xl ">
             Nepal's leading study abroad consultants
           </h1>
